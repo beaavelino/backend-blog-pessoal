@@ -11,11 +11,11 @@ public class UserDetailsImpl implements UserDetails{
 	private static final long serialVersionUID = 1L;
 	
 	private String userName;
-	private String passWord;
+	private String password;
 	
 	public UserDetailsImpl(Usuario user) {
-		this.userName = user.getUsuario();
-		this.passWord = user.getSenha();
+		this.userName = user.getNome();
+		this.password = user.getSenha();
 	}
 	
 	public UserDetailsImpl() {}
@@ -29,7 +29,7 @@ public class UserDetailsImpl implements UserDetails{
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return passWord;
+		return password;
 	}
 
 	@Override
